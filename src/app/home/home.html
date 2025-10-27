@@ -1,1 +1,19 @@
-<p>home works!</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>categoriaID</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let p of productos">
+            <td>{{p.nombre}}</td>
+            <td>{{p.precio}}</td>
+            <td>{{p.categoria_id}}</td>
+        </tr>
+
+    </tbody>
+
+</table>
