@@ -1,16 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Productoservice } from '../core/services/productoservice';
-
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   imports: [CommonModule],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrl: './home.css'
 })
 export class Home {
-   //declaramos una variables para recibir la data del backend
+  //declaramos una variables para recibir la data del backend
   productos:any[]=[];
   /**
    *
@@ -33,5 +31,6 @@ export class Home {
     })
 
   }
+
 
 }
