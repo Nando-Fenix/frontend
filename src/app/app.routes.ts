@@ -10,7 +10,12 @@ export const routes: Routes = [
                 path:'',
                 loadComponent:()=>
                     import('./home/home').then(m=>m.Home)
-            }
+            },
+            {
+                path:'formulario',
+                loadComponent:()=>
+                    import('./formulario/formulario').then(m=>m.Formulario)
+            },
         ]
     }
 ];

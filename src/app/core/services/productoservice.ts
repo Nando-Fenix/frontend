@@ -1,6 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+export interface Producto {
+  nombre: string;
+  precio: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,4 +25,8 @@ export class Productoservice {
   listaProductos():Observable<any[]>{
     return this.http.get<any[]>(this.base);
   }
+  crearProducto(producto: Producto): Observable<Producto> {
+    return this.http.post<Producto>(this.base, producto);
+  }
+
 }

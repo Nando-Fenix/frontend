@@ -28,7 +28,7 @@ export class Home {
       
       },
       error:(err)=>console.error('error al cargar productos',err)
-    })
+    });
 
   }
 
