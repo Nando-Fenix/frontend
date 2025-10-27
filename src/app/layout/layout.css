@@ -1,0 +1,28 @@
+header .nav-link {
+  margin-left: 15px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  header .nav-link {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}

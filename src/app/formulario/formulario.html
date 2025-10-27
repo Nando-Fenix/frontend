@@ -1,10 +1,37 @@
-<h2>Agregar Producto</h2>
-<form (ngSubmit)="agregarProducto()">
-  <label>Nombre:</label>
-  <input type="text" [(ngModel)]="nuevoProducto.nombre" name="nombre" required>
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Agregar Producto</h2>
+  
+  <form (ngSubmit)="agregarProducto()" class="row g-3">
+    
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input 
+        id="nombre"
+        type="text" 
+        [(ngModel)]="nuevoProducto.nombre" 
+        name="nombre" 
+        class="form-control"
+        placeholder="Nombre del producto"
+        required
+      >
+    </div>
 
-  <label>Precio:</label>
-  <input type="number" [(ngModel)]="nuevoProducto.precio" name="precio" required>
+    <div class="col-md-6">
+      <label for="precio" class="form-label">Precio:</label>
+      <input 
+        id="precio"
+        type="number" 
+        [(ngModel)]="nuevoProducto.precio" 
+        name="precio" 
+        class="form-control"
+        placeholder="Precio del producto"
+        required
+      >
+    </div>
 
-  <button type="submit">Agregar</button>
-</form>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary mt-3">Agregar</button>
+    </div>
+
+  </form>
+</div>

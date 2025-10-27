@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  min-height: 100vh; 
+}
+
+
+main {
+  padding: 1rem;
+}
+
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
