@@ -11,17 +11,21 @@ import { CommonModule } from '@angular/common';
   styleUrl: './formulario.css',
 })
 export class Formulario {
+  mensaje: string = '';
   nuevoProducto = { nombre: '', precio: 0 };
 
   constructor(private productoService: Productoservice) {}
 
-  agregarProducto(): void {
-    this.productoService.crearProducto(this.nuevoProducto).subscribe({
-      next: (data) => {
-        console.log('Producto agregado:', data);
-        this.nuevoProducto = { nombre: '', precio: 0 };
-      },
-      error: (err) => console.error('Error al agregar producto', err)
-    });
-  }
+  agregarProducto(form: any): void {
+  this.productoService.crearProducto(this.nuevoProducto).subscribe({
+    next: (data) => {
+      this.mensaje = '✅ Producto agregado correctamente';
+
+      // vaciar campos
+      form.resetForm();
+
+      setTimeout(() => this.mensaje = '', 3000);
+    }
+  });
+}
 }
